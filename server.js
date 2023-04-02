@@ -33,12 +33,17 @@ import Orders from "./routes/orders/Orders.js";
 import OrderStatus from "./routes/orders/OrderStatus.js";
 import AllOrders from "./routes/orders/AllOrders.js";
 import path from "path";
+import {fileURLToPath} from "url"
 
 // configure env
 dotenv.config();
 
 // database config
 connectDB();
+
+// moduleFix
+const __filename=fileURLToPath(import.meta.url);
+const __dirname= path.dirname(__filename);
 
 // rest objects
 const app = express();
