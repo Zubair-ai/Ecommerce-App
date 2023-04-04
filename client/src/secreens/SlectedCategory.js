@@ -15,11 +15,11 @@ const SlectedCategory = () => {
         `/api//selectedcategory/${params.slug}`
       );
       if (res) {
-        toast.success(`${res.data.products.name} uploaded successfully`);
+        
         setProducts(res?.data?.products);
         setCategory(res?.data?.category);
       } else {
-        toast.error(res.data.message);
+        console.log(res.data.message);
       }
     } catch (error) {
       console.log(error);
