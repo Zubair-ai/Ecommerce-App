@@ -16,7 +16,7 @@ const MoreDetail = () => {
       );
       setSingleProduct(response.data.product);
       similarProductHandler(response.data.product._id,response.data.product.category._id)
-      toast.success('Getting product successfully');
+      
     } catch (error) {
       console.log(error);
       toast.error('Something went wrong in getting product');
@@ -32,15 +32,15 @@ const MoreDetail = () => {
         `/api//similarproduct/${pid}/${cid}`
       );
       setRelatedProduct(response?.data?.products);
-      toast.success('Getting product successfully');
+      
     } catch (error) {
       console.log(error);
-      toast.error('Something went wrong in getting product');
+      
     }
   };
 
 
-  console.log('singleProduct', singleProduct);
+  
 
   return (
     <Layout>
