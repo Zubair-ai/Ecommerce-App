@@ -19,7 +19,7 @@ const CreateCategory = () => {
         "/api//allcategories"
       );
       setCategory(response.data.categories);
-      toast.success("geeting categories successfully");
+      
     } catch (error) {
       console.log(error);
       toast.error("something went wrong in geeting categories");
@@ -37,14 +37,14 @@ const CreateCategory = () => {
         { name: newCategoryName }
       );
       if (res) {
-        toast.success(`${res.data.enterCategory.name} uploaded successfully`);
+        
         categoryHandler();
       } else {
-        toast.error(res.data.message);
+        console.log(res.data.message);
       }
     } catch (error) {
       console.log(error);
-      toast.error("something went wrong");
+      console.log("something went wrong");
     }
   };
   const categoryUpdatedHandler = async (e) => {
@@ -56,12 +56,12 @@ const CreateCategory = () => {
         { name: updateCategoryName }
       );
       if (res.success) {
-        toast.success(res.data.message);
+        
         setVisible(false);
 
         categoryHandler();
       } else {
-        toast.error(res.data.message);
+        console.log(res.data.message);
       }
     } catch (error) {
       console.log(error);
