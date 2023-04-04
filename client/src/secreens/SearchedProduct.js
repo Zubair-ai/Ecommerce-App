@@ -5,7 +5,6 @@ import SearchContext from '../usecontext/SearchContext';
 
 const SearchedProduct = () => {
     const searchctx=useContext(SearchContext);
-    console.log("searchctx.headerSearch?.products",searchctx.headerSearch?.product)
   return (
     <Layout>
       <div className='text-center m-3'> <h1>Searched products</h1></div>
