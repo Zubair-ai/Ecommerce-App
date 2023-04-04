@@ -25,10 +25,10 @@ const CreateProduct = () => {
         "/api//allcategories"
       );
       setCreateCategory(response.data.categories);
-      toast.success("geeting categories successfully");
+      
     } catch (error) {
       console.log(error);
-      toast.error("something went wrong in geeting categories");
+      
     }
   };
   useEffect(() => {
@@ -47,7 +47,7 @@ const CreateProduct = () => {
             productData.append("category",category);
             const res=axios.post("/api//createproduct", productData)
             if(res?.data?.success){
-                toast.success(res.data.message);
+                
                 navigate("/dashboard/admin/products");
             }else{
                 toast.error(res.data,message)
