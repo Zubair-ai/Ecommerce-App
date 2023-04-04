@@ -12,7 +12,7 @@ const Products = () => {
     try {
       const res = await axios.get("/api/getproducts");
       if (res?.data?.success) {
-        toast.success(res.data.message);
+        
         setProducts(res.data.products);
       } else {
         toast.error(res.data.message);
